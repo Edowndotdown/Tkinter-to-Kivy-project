@@ -49,3 +49,46 @@ Whether you want to squash bugs, polish translations, or break the system in ele
 ## 💬 Questions or Ideas?
 
 Ping us in [Issues](../../issues) to report translation problems, share improvement ideas, or ask about contributing.
+
+---
+
+## 📜Demo Code
+
+<img width="811" height="636" alt="image" src="https://github.com/user-attachments/assets/c24f3d2b-9acf-46ee-b6c7-367c1298d88e" />
+
+```
+# Enable translation with special imports
+from tkintertokivy import tk       # Tk module wrapper
+from tkintertokivy import tkFont   # Font handling
+from tkintertokivy import Label    # Widget translation
+
+# Load Tkinter modules
+import tkinter as tk
+import tkinter.ttk as ttk
+from tkintertokivy import auto_translate_mode
+
+# Activate translation mode
+auto_translate_mode()
+
+# Continue with typical Tkinter widgets
+from tkinter import Entry
+from tkinter import StringVar, Checkbutton, Radiobutton, IntVar, Text, Button, messagebox
+
+def button_click():
+    print("Button clicked!")
+
+root = tk.Tk()
+root.title("My Demo App")
+
+button = tk.Button(root, text="Click Me", bg="blue", command=button_click)
+button.place(x=50, y=0, width=100, height=30)
+check = Checkbutton(root, text="Check Me", variable=IntVar())
+check.place(x=200, y=0, width=100, height=30)
+entry1 = Entry(root)
+entry1.place(x=350, y=0, width=100, height=30)
+entry1.insert(0, "Type here")
+
+root.mainloop()
+```
+
+<img width="320" height="368" alt="355979072-ea2ae750-d9e6-4a64-8755-dc9322d70816" src="https://github.com/user-attachments/assets/035e8a72-2d52-4612-abeb-8c34adafc9d5" />
